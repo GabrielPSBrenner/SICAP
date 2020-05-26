@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CUsuario" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" />
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICUsuario_ExcluirRotaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirRotaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirRotaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirRotaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirDigital_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirDigital" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirDigital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirDigitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Alterar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Alterar" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Alterar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Excluir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Excluir" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Excluir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_CartaoAdicionado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CartaoAdicionado" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_CartaoAdicionado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CartaoAdicionadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_RotaAdicionada_InputMessage">
+    <wsdl:part name="parameters" element="tns:RotaAdicionada" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_RotaAdicionada_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RotaAdicionadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirEquipamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirEquipamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarEquipamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarEquipamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirEquipamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirEquipamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_oListaEquipamentoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:oListaEquipamentoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_oListaEquipamentoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:oListaEquipamentoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarTodosEquipamentosNaoDistribuidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosEquipamentosNaoDistribuidos" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarTodosEquipamentosNaoDistribuidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTodosEquipamentosNaoDistribuidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarRota_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRota" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarRota_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarFuncionario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarFuncionario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarTerceiro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTerceiro" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarTerceiro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarTerceiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarEstagiario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstagiario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarEstagiario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEstagiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarVisitante_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarVisitante" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarVisitante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarVisitanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarEquipamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEquipamento" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarEquipamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarEquipamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarRotaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRotaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarRotaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarRotaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarCartaoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCartaoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarCartaoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarCartaoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarDigitalUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDigitalUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ListarDigitalUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarDigitalUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaEquipamentoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEquipamentoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaEquipamentoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEquipamentoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaCartaoUSuarioPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartaoUSuarioPK" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaCartaoUSuarioPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartaoUSuarioPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaRotaPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaRotaPK" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaRotaPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaRotaPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaFuncionario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaFuncionario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaEstagiario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEstagiario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaEstagiario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEstagiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaVisitante_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaVisitante" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaVisitante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaVisitanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaTerceiro_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTerceiro" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_SelecionaTerceiro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTerceiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Incluir_InputMessage">
+    <wsdl:part name="parameters" element="tns:Incluir" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_Incluir_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirCartaoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirCartaoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirCartaoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarCartaoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarCartaoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarCartaoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarCartaoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirCartaoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirCartaoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_ExcluirCartaoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExcluirCartaoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirRotaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirRotaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_IncluirRotaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirRotaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarRotaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarRotaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICUsuario_AlterarRotaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AlterarRotaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICUsuario">
+    <wsdl:operation name="ExcluirRotaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ExcluirRotaUsuario" message="tns:ICUsuario_ExcluirRotaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ExcluirRotaUsuarioResponse" message="tns:ICUsuario_ExcluirRotaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirDigital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ExcluirDigital" message="tns:ICUsuario_ExcluirDigital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ExcluirDigitalResponse" message="tns:ICUsuario_ExcluirDigital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/Alterar" message="tns:ICUsuario_Alterar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/AlterarResponse" message="tns:ICUsuario_Alterar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/Excluir" message="tns:ICUsuario_Excluir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ExcluirResponse" message="tns:ICUsuario_Excluir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoAdicionado">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/CartaoAdicionado" message="tns:ICUsuario_CartaoAdicionado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/CartaoAdicionadoResponse" message="tns:ICUsuario_CartaoAdicionado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RotaAdicionada">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/RotaAdicionada" message="tns:ICUsuario_RotaAdicionada_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/RotaAdicionadaResponse" message="tns:ICUsuario_RotaAdicionada_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirEquipamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/IncluirEquipamento" message="tns:ICUsuario_IncluirEquipamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/IncluirEquipamentoResponse" message="tns:ICUsuario_IncluirEquipamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarEquipamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/AlterarEquipamento" message="tns:ICUsuario_AlterarEquipamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/AlterarEquipamentoResponse" message="tns:ICUsuario_AlterarEquipamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirEquipamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ExcluirEquipamento" message="tns:ICUsuario_ExcluirEquipamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ExcluirEquipamentoResponse" message="tns:ICUsuario_ExcluirEquipamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="oListaEquipamentoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/oListaEquipamentoUsuario" message="tns:ICUsuario_oListaEquipamentoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/oListaEquipamentoUsuarioResponse" message="tns:ICUsuario_oListaEquipamentoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosEquipamentosNaoDistribuidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarTodosEquipamentosNaoDistribuidos" message="tns:ICUsuario_ListarTodosEquipamentosNaoDistribuidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarTodosEquipamentosNaoDistribuidosResponse" message="tns:ICUsuario_ListarTodosEquipamentosNaoDistribuidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarCartao" message="tns:ICUsuario_ListarCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarCartaoResponse" message="tns:ICUsuario_ListarCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarUsuario" message="tns:ICUsuario_ListarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarUsuarioResponse" message="tns:ICUsuario_ListarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRota">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarRota" message="tns:ICUsuario_ListarRota_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarRotaResponse" message="tns:ICUsuario_ListarRota_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarFuncionario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarFuncionario" message="tns:ICUsuario_ListarFuncionario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarFuncionarioResponse" message="tns:ICUsuario_ListarFuncionario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarTerceiro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarTerceiro" message="tns:ICUsuario_ListarTerceiro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarTerceiroResponse" message="tns:ICUsuario_ListarTerceiro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEstagiario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarEstagiario" message="tns:ICUsuario_ListarEstagiario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarEstagiarioResponse" message="tns:ICUsuario_ListarEstagiario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarVisitante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarVisitante" message="tns:ICUsuario_ListarVisitante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarVisitanteResponse" message="tns:ICUsuario_ListarVisitante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEquipamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarEquipamento" message="tns:ICUsuario_ListarEquipamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarEquipamentoResponse" message="tns:ICUsuario_ListarEquipamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRotaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarRotaUsuario" message="tns:ICUsuario_ListarRotaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarRotaUsuarioResponse" message="tns:ICUsuario_ListarRotaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarCartaoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarCartaoUsuario" message="tns:ICUsuario_ListarCartaoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarCartaoUsuarioResponse" message="tns:ICUsuario_ListarCartaoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarDigitalUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ListarDigitalUsuario" message="tns:ICUsuario_ListarDigitalUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ListarDigitalUsuarioResponse" message="tns:ICUsuario_ListarDigitalUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEquipamentoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaEquipamentoUsuario" message="tns:ICUsuario_SelecionaEquipamentoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaEquipamentoUsuarioResponse" message="tns:ICUsuario_SelecionaEquipamentoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaCartao" message="tns:ICUsuario_SelecionaCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaCartaoResponse" message="tns:ICUsuario_SelecionaCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaUsuario" message="tns:ICUsuario_SelecionaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaUsuarioResponse" message="tns:ICUsuario_SelecionaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartaoUSuarioPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaCartaoUSuarioPK" message="tns:ICUsuario_SelecionaCartaoUSuarioPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaCartaoUSuarioPKResponse" message="tns:ICUsuario_SelecionaCartaoUSuarioPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaRotaPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaRotaPK" message="tns:ICUsuario_SelecionaRotaPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaRotaPKResponse" message="tns:ICUsuario_SelecionaRotaPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaFuncionario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaFuncionario" message="tns:ICUsuario_SelecionaFuncionario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaFuncionarioResponse" message="tns:ICUsuario_SelecionaFuncionario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEstagiario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaEstagiario" message="tns:ICUsuario_SelecionaEstagiario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaEstagiarioResponse" message="tns:ICUsuario_SelecionaEstagiario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaVisitante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaVisitante" message="tns:ICUsuario_SelecionaVisitante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaVisitanteResponse" message="tns:ICUsuario_SelecionaVisitante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTerceiro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/SelecionaTerceiro" message="tns:ICUsuario_SelecionaTerceiro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/SelecionaTerceiroResponse" message="tns:ICUsuario_SelecionaTerceiro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Incluir">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/Incluir" message="tns:ICUsuario_Incluir_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/IncluirResponse" message="tns:ICUsuario_Incluir_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/IncluirCartaoUsuario" message="tns:ICUsuario_IncluirCartaoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/IncluirCartaoUsuarioResponse" message="tns:ICUsuario_IncluirCartaoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCartaoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/AlterarCartaoUsuario" message="tns:ICUsuario_AlterarCartaoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/AlterarCartaoUsuarioResponse" message="tns:ICUsuario_AlterarCartaoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirCartaoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/ExcluirCartaoUsuario" message="tns:ICUsuario_ExcluirCartaoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/ExcluirCartaoUsuarioResponse" message="tns:ICUsuario_ExcluirCartaoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirRotaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/IncluirRotaUsuario" message="tns:ICUsuario_IncluirRotaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/IncluirRotaUsuarioResponse" message="tns:ICUsuario_IncluirRotaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AlterarRotaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICUsuario/AlterarRotaUsuario" message="tns:ICUsuario_AlterarRotaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICUsuario/AlterarRotaUsuarioResponse" message="tns:ICUsuario_AlterarRotaUsuario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICUsuario" type="tns:ICUsuario">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExcluirRotaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ExcluirRotaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirDigital">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ExcluirDigital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Alterar">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/Alterar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Excluir">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/Excluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoAdicionado">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/CartaoAdicionado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RotaAdicionada">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/RotaAdicionada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirEquipamento">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/IncluirEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarEquipamento">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/AlterarEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirEquipamento">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ExcluirEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="oListaEquipamentoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/oListaEquipamentoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTodosEquipamentosNaoDistribuidos">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarTodosEquipamentosNaoDistribuidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCartao">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRota">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarRota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarFuncionario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarTerceiro">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarTerceiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEstagiario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarEstagiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarVisitante">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarVisitante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEquipamento">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarEquipamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRotaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarRotaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarCartaoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarCartaoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarDigitalUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ListarDigitalUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEquipamentoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaEquipamentoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartao">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartaoUSuarioPK">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaCartaoUSuarioPK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaRotaPK">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaRotaPK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaFuncionario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEstagiario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaEstagiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaVisitante">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaVisitante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTerceiro">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/SelecionaTerceiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Incluir">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/Incluir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirCartaoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/IncluirCartaoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarCartaoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/AlterarCartaoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirCartaoUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/ExcluirCartaoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirRotaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/IncluirRotaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AlterarRotaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICUsuario/AlterarRotaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CUsuario">
+    <wsdl:port name="BasicHttpBinding_ICUsuario" binding="tns:BasicHttpBinding_ICUsuario">
+      <soap:address location="http://localhost:56105/CONTROL/CUsuario.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

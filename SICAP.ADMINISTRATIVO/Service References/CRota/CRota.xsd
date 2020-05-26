@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CRota.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ROTA" nillable="true" type="tns:ROTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfROTA" nillable="true" type="tns:ArrayOfROTA" />
+  <xs:complexType name="ROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ROBloqueada" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ROCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="RODescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RONome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROTA" nillable="true" type="tns:ROTA" />
+  <xs:complexType name="ArrayOfPONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PONTOCONTROLE" nillable="true" type="tns:PONTOCONTROLE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPONTOCONTROLE" nillable="true" type="tns:ArrayOfPONTOCONTROLE" />
+  <xs:complexType name="PONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PoBiometria" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCartaoRFID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="PoControlaSaida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoDisparaAlarme" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoObservacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoPermiteLiberacaoForcada" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoQtdMediaPessoas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PoQtdVerificaEquip" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PoSenha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoSmartCard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoTentativaIndevidaDisparaAlarme" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PoTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PONTOCONTROLE" nillable="true" type="tns:PONTOCONTROLE" />
+  <xs:complexType name="PONTOROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="PRCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="PROrdem" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTempoMaxPerm" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTipoPontoControle" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PONTOROTA" nillable="true" type="tns:PONTOROTA" />
+  <xs:complexType name="ArrayOfvw_PontoRota">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_PontoRota" nillable="true" type="tns:vw_PontoRota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_PontoRota" nillable="true" type="tns:ArrayOfvw_PontoRota" />
+  <xs:complexType name="vw_PontoRota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="PRCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="PROrdem" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTempoMaxPerm" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTipoPontoControle" type="ser:char" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_PontoRota" nillable="true" type="tns:vw_PontoRota" />
+</xs:schema>

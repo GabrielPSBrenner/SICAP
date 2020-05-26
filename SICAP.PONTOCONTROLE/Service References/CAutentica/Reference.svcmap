@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4db41679-aa11-4cf3-b3aa-8dfaab3b2f7f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56105/CONTROL_PC/CAutentica.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CAutentica.xsd" MetadataType="Schema" ID="7b944bf4-8d7e-455e-ac53-630d8844c879" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CAutentica.svc?xsd=xsd1" />
+    <MetadataFile FileName="CAutentica.disco" MetadataType="Disco" ID="c88e6de8-0bdc-44c1-8509-768215a6a4cb" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CAutentica.svc?disco" />
+    <MetadataFile FileName="CAutentica1.xsd" MetadataType="Schema" ID="bc15e942-3ba2-4770-a23e-1a458a64d2c5" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CAutentica.svc?xsd=xsd0" />
+    <MetadataFile FileName="CAutentica.wsdl" MetadataType="Wsdl" ID="92526cc9-13aa-4954-8158-a59c443de9d0" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CAutentica.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

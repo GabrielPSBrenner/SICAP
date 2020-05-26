@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CPonto" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL_PC/CPonto.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL_PC/CPonto.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56105/CONTROL_PC/CPonto.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICPonto_SelecionaPKPontoControle_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaPKPontoControle" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaPKPontoControle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaPKPontoControleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaFuncionario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaFuncionario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaEstagiario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEstagiario" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaEstagiario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaEstagiarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaTerceiro_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTerceiro" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaTerceiro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaTerceiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaVisitante_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaVisitante" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaVisitante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaVisitanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_RotasUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:RotasUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_RotasUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RotasUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_PontosRota_InputMessage">
+    <wsdl:part name="parameters" element="tns:PontosRota" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_PontosRota_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PontosRotaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_PossuiPermissaoPonto_InputMessage">
+    <wsdl:part name="parameters" element="tns:PossuiPermissaoPonto" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_PossuiPermissaoPonto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PossuiPermissaoPontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_IncluirAcesso_InputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirAcesso" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_IncluirAcesso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IncluirAcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaHash_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaHash" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaHash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaHash_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaHash" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaHash_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaHashResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaHashUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaHashUsuario" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaHashUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaHashUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaDigital_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaDigital" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaDigital_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaDigitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaUsuarioRede_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuarioRede" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaUsuarioRede_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaUsuarioRedeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaCartao_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartao" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_SelecionaCartao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecionaCartaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ContratoValidoTerceiro_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContratoValidoTerceiro" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ContratoValidoTerceiro_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContratoValidoTerceiroResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaEquipamentoPonto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEquipamentoPonto" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaEquipamentoPonto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEquipamentoPontoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaEquipamentoUsuarioTAG_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEquipamentoUsuarioTAG" />
+  </wsdl:message>
+  <wsdl:message name="ICPonto_ListaEquipamentoUsuarioTAG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaEquipamentoUsuarioTAGResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICPonto">
+    <wsdl:operation name="SelecionaPKPontoControle">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaPKPontoControle" message="tns:ICPonto_SelecionaPKPontoControle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaPKPontoControleResponse" message="tns:ICPonto_SelecionaPKPontoControle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaUsuario" message="tns:ICPonto_SelecionaUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaUsuarioResponse" message="tns:ICPonto_SelecionaUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaFuncionario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaFuncionario" message="tns:ICPonto_SelecionaFuncionario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaFuncionarioResponse" message="tns:ICPonto_SelecionaFuncionario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEstagiario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaEstagiario" message="tns:ICPonto_SelecionaEstagiario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaEstagiarioResponse" message="tns:ICPonto_SelecionaEstagiario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTerceiro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaTerceiro" message="tns:ICPonto_SelecionaTerceiro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaTerceiroResponse" message="tns:ICPonto_SelecionaTerceiro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaVisitante">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaVisitante" message="tns:ICPonto_SelecionaVisitante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaVisitanteResponse" message="tns:ICPonto_SelecionaVisitante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RotasUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/RotasUsuario" message="tns:ICPonto_RotasUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/RotasUsuarioResponse" message="tns:ICPonto_RotasUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PontosRota">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/PontosRota" message="tns:ICPonto_PontosRota_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/PontosRotaResponse" message="tns:ICPonto_PontosRota_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PossuiPermissaoPonto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/PossuiPermissaoPonto" message="tns:ICPonto_PossuiPermissaoPonto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/PossuiPermissaoPontoResponse" message="tns:ICPonto_PossuiPermissaoPonto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IncluirAcesso">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/IncluirAcesso" message="tns:ICPonto_IncluirAcesso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/IncluirAcessoResponse" message="tns:ICPonto_IncluirAcesso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaHash">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/ListaHash" message="tns:ICPonto_ListaHash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/ListaHashResponse" message="tns:ICPonto_ListaHash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaHash">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaHash" message="tns:ICPonto_SelecionaHash_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaHashResponse" message="tns:ICPonto_SelecionaHash_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaHashUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaHashUsuario" message="tns:ICPonto_SelecionaHashUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaHashUsuarioResponse" message="tns:ICPonto_SelecionaHashUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaDigital">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaDigital" message="tns:ICPonto_SelecionaDigital_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaDigitalResponse" message="tns:ICPonto_SelecionaDigital_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuarioRede">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaUsuarioRede" message="tns:ICPonto_SelecionaUsuarioRede_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaUsuarioRedeResponse" message="tns:ICPonto_SelecionaUsuarioRede_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartao">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/SelecionaCartao" message="tns:ICPonto_SelecionaCartao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/SelecionaCartaoResponse" message="tns:ICPonto_SelecionaCartao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContratoValidoTerceiro">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/ContratoValidoTerceiro" message="tns:ICPonto_ContratoValidoTerceiro_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/ContratoValidoTerceiroResponse" message="tns:ICPonto_ContratoValidoTerceiro_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEquipamentoPonto">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/ListaEquipamentoPonto" message="tns:ICPonto_ListaEquipamentoPonto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/ListaEquipamentoPontoResponse" message="tns:ICPonto_ListaEquipamentoPonto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEquipamentoUsuarioTAG">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICPonto/ListaEquipamentoUsuarioTAG" message="tns:ICPonto_ListaEquipamentoUsuarioTAG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICPonto/ListaEquipamentoUsuarioTAGResponse" message="tns:ICPonto_ListaEquipamentoUsuarioTAG_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICPonto" type="tns:ICPonto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelecionaPKPontoControle">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaPKPontoControle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaFuncionario">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaEstagiario">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaEstagiario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaTerceiro">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaTerceiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaVisitante">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaVisitante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RotasUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/RotasUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PontosRota">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/PontosRota" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PossuiPermissaoPonto">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/PossuiPermissaoPonto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IncluirAcesso">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/IncluirAcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaHash">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/ListaHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaHash">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaHash" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaHashUsuario">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaHashUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaDigital">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaDigital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaUsuarioRede">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaUsuarioRede" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelecionaCartao">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/SelecionaCartao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContratoValidoTerceiro">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/ContratoValidoTerceiro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEquipamentoPonto">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/ListaEquipamentoPonto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEquipamentoUsuarioTAG">
+      <soap:operation soapAction="http://tempuri.org/ICPonto/ListaEquipamentoUsuarioTAG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CPonto">
+    <wsdl:port name="BasicHttpBinding_ICPonto" binding="tns:BasicHttpBinding_ICPonto">
+      <soap:address location="http://localhost:56105/CONTROL_PC/CPonto.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

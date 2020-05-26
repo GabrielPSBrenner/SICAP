@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="24d783cc-b5c5-4479-95a0-b75d8840b86d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56105/CONTROL_PC/CConfigura.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CConfigura.wsdl" MetadataType="Wsdl" ID="d9766d1b-7fbe-465e-b805-397b9ff599a7" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CConfigura.svc?wsdl" />
+    <MetadataFile FileName="CConfigura.disco" MetadataType="Disco" ID="373f3980-d69a-4e11-b601-eddaa3c38d1f" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CConfigura.svc?disco" />
+    <MetadataFile FileName="CConfigura.xsd" MetadataType="Schema" ID="2a377c0c-34f3-41dc-a004-1ceb7983e601" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CConfigura.svc?xsd=xsd2" />
+    <MetadataFile FileName="CConfigura1.xsd" MetadataType="Schema" ID="b84e3a1f-fe98-4e7e-a26c-4de46c07ccc9" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CConfigura.svc?xsd=xsd1" />
+    <MetadataFile FileName="CConfigura2.xsd" MetadataType="Schema" ID="160d0d70-94fc-469a-a969-997b2e4332e0" SourceId="1" SourceUrl="http://localhost:56105/CONTROL_PC/CConfigura.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

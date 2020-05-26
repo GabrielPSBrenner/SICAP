@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CPontoControle.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" />
+  <xs:element name="ListarTodosPontosControle">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarTodosPontosControleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" minOccurs="0" name="ListarTodosPontosControleResult" nillable="true" type="q1:ArrayOfPONTOCONTROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecionaPKPontoControle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Codigo" type="xs:int" />
+        <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecionaPKPontoControleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" minOccurs="0" name="SelecionaPKPontoControleResult" nillable="true" type="q2:PONTOCONTROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Incluir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" minOccurs="0" name="oPONTOCONTROLE" nillable="true" type="q3:PONTOCONTROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IncluirResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Alterar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" minOccurs="0" name="oPONTOCONTROLE" nillable="true" type="q4:PONTOCONTROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AlterarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Excluir">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" minOccurs="0" name="oPONTOCONTROLE" nillable="true" type="q5:PONTOCONTROLE" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExcluirResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

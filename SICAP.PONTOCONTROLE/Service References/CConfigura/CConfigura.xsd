@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL_PC/CConfigura.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfPONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PONTOCONTROLE" nillable="true" type="tns:PONTOCONTROLE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPONTOCONTROLE" nillable="true" type="tns:ArrayOfPONTOCONTROLE" />
+  <xs:complexType name="PONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PoBiometria" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCartaoRFID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="PoControlaSaida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoDisparaAlarme" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoObservacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoPermiteLiberacaoForcada" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoSenha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoSmartCard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoTentativaIndevidaDisparaAlarme" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PoTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PONTOCONTROLE" nillable="true" type="tns:PONTOCONTROLE" />
+</xs:schema>

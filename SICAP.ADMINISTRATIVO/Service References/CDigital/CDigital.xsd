@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CDigital.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="DiDataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiDedo" type="ser:char" />
+      <xs:element minOccurs="0" name="DiMao" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DIGITAL" nillable="true" type="tns:DIGITAL" />
+  <xs:complexType name="HASHDIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HaCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoDigital" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCredencialBiometricaTextual" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HASHDIGITAL" nillable="true" type="tns:HASHDIGITAL" />
+  <xs:complexType name="ArrayOfDIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DIGITAL" nillable="true" type="tns:DIGITAL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDIGITAL" nillable="true" type="tns:ArrayOfDIGITAL" />
+</xs:schema>

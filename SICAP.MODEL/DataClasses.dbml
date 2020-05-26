@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ACESSO" Class="DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=RES227548\sqlexpress;Initial Catalog=ACESSO;Integrated Security=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CONTRATOTERCEIRO" Member="CONTRATOTERCEIROs">
+    <Type Name="CONTRATOTERCEIRO">
+      <Column Name="CTCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTCodigoLocal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTCodigoLotacao" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTCodigoTerceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTCNPJFornecedor" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTDataInicioContrato" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTDataExpiracaoContrato" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CTObservacao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIGITAL" Member="DIGITALs">
+    <Type Name="DIGITAL">
+      <Column Name="DiCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DiMao" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DiDedo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DiDataVencimento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FABRICANTE" Member="FABRICANTEs">
+    <Type Name="FABRICANTE">
+      <Column Name="FaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FaNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FORNECEDOR" Member="FORNECEDORs">
+    <Type Name="FORNECEDOR">
+      <Column Name="FOCNPJ" Type="System.String" DbType="VarChar(14) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FORazaoSocial" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FONomeFantasia" Type="System.String" DbType="VarChar(100)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOCALIDADE" Member="LOCALIDADEs">
+    <Type Name="LOCALIDADE">
+      <Column Name="LoCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOTACAO" Member="LOTACAOs">
+    <Type Name="LOTACAO">
+      <Column Name="LoCodigo" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoCodigoLocalidade" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoNome" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoSigla" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoAtivo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LoDescricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOTACAOROTA" Member="LOTACAOROTAs">
+    <Type Name="LOTACAOROTA">
+      <Column Name="LRCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LRCodigoLocalidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LRCodigoLotacao" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LRCodigoRota" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LRDataInicioPermissao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LRDataExpiracao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PARAMETRO" Member="PARAMETROs">
+    <Type Name="PARAMETRO">
+      <Column Name="PACodigo" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PATempoExpiraSaida" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PAServidorDominio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PAServidorCorreio" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PONTOROTA" Member="PONTOROTAs">
+    <Type Name="PONTOROTA">
+      <Column Name="PRCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRCodigoRota" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRTipoPontoControle" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PROrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRTempoMaxPerm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CARTAO" Member="CARTAOs">
+    <Type Name="CARTAO">
+      <Column Name="CrCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrCodigoFabricante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrTipo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrNumeroCartao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrBloqueado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CrMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CrDataBloqueio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_PontoRota" Member="vw_PontoRotas">
+    <Type Name="vw_PontoRota">
+      <Column Name="PRCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRCodigoRota" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRTipoPontoControle" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PROrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PRTempoMaxPerm" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_Digital" Member="vw_Digitals">
+    <Type Name="vw_Digital">
+      <Column Name="DiCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiImgDigital" Type="System.Data.Linq.Binary" DbType="Binary(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="DiMao" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiDedo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DiDataVencimento" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EqNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HaCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIO" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="USCODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="USCODIGOESTAGIARIO" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USCODIGOTERCEIRO" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USCODIGOVISITANTE" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USMATFUNC" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USTIPO" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="USUSUARIOREDE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USBloqueado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="USMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USSenhaOpcional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USAdministrador" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USGerente" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USAuditor" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="USSeguranca" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CARTAOUSUARIO" Member="CARTAOUSUARIOs">
+    <Type Name="CARTAOUSUARIO">
+      <Column Name="CSCODIGO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSCodigoCartao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSDataEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSDataExpiracao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CSDevolvido" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CSDataDevolucao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_CartaoUsuario" Member="vw_CartaoUsuarios">
+    <Type Name="vw_CartaoUsuario">
+      <Column Name="CSCODIGO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSCodigoCartao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrTipo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CrNumeroCartao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSDataEntrega" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSDataExpiracao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CSObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CSDevolvido" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CSDataDevolucao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HASHDIGITAL" Member="HASHDIGITALs">
+    <Type Name="HASHDIGITAL">
+      <Column Name="HaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HaCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HaCodigoDigital" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HaCodigoEquipamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HaCredencialBiometricaTextual" Type="System.String" DbType="VarChar(500)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ACESSOPONTOCONTROLE" Member="ACESSOPONTOCONTROLEs">
+    <Type Name="ACESSOPONTOCONTROLE">
+      <Column Name="APCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APTipoPontoControle" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APCodigoUsuarioLiberaForcado" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APCodigoUsuarioAcesso" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APCodigoUsuarioInterrompeAlarme" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APCodigoCartao" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APDataAcesso" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APNegado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APControlarSaida" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="APDisparouAlarme" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APDataInterrupcaoAlarme" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APObservacaoInterrupcao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APAcessoForcado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="APMotivoAcessoForcado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTAGIARIO" Member="ESTAGIARIOs">
+    <Type Name="ESTAGIARIO">
+      <Column Name="ESCodigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ESCodigoLocalidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ESCodigoLotacao" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ESNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FUNCIONARIO" Member="FUNCIONARIOs">
+    <Type Name="FUNCIONARIO">
+      <Column Name="FUMATFUNC" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FUCodigoLocalidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FUCodigoLotacao" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FUNOMFUNC" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TERCEIRO" Member="TERCEIROs">
+    <Type Name="TERCEIRO">
+      <Column Name="TeCodigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TeNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VISITA" Member="VISITAs">
+    <Type Name="VISITA">
+      <Column Name="VtCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="VtCodigoVisitante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="VtDataInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="VtDataTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="VtMotivo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VISITANTE" Member="VISITANTEs">
+    <Type Name="VISITANTE">
+      <Column Name="ViCodigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ViNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_Acesso" Member="vw_Acessos">
+    <Type Name="vw_Acesso">
+      <Column Name="APCodigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="APTipoPontoControle" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="APCodigoUsuarioLiberaForcado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APCodigoUsuarioAcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APCodigoUsuarioInterrompeAlarme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APCodigoCartao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="APDataAcesso" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="APNegado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="APControlarSaida" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="APDataInterrupcaoAlarme" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="APDisparouAlarme" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="APObservacaoInterrupcao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="APAcessoForcado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="APMotivoAcessoForcado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="USCODIGOESTAGIARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USCODIGOTERCEIRO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USCODIGOVISITANTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USTIPO" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="USMATFUNC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TeNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FUNOMFUNC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ViNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_Usuario" Member="vw_Usuarios">
+    <Type Name="vw_Usuario">
+      <Column Name="USCODIGO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="USCODIGOESTAGIARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USCODIGOTERCEIRO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USCODIGOVISITANTE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USMATFUNC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USTIPO" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USUSUARIOREDE" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="USBloqueado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="USMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="USSenhaOpcional" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="USAdministrador" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USGerente" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USAuditor" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="USSeguranca" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TeNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ViNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ESNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FUNOMFUNC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_TotalAcessoPontoDia" Member="vw_TotalAcessoPontoDias">
+    <Type Name="vw_TotalAcessoPontoDia">
+      <Column Name="PoTipo" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="APCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DIA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MÊS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ANO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalAcesso" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APNegado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPOEQUIPAMENTO" Member="TIPOEQUIPAMENTOs">
+    <Type Name="TIPOEQUIPAMENTO">
+      <Column Name="TECodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TEDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TEEPI" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EQUIPAMENTO" Member="EQUIPAMENTOs">
+    <Type Name="EQUIPAMENTO">
+      <Column Name="EqCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FaCodigoFabricante" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqTipoEquipamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqTipoLibera" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqTempoSinal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqTAGRFID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EqBloqueado" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EQUIPAMENTOPONTO" Member="EQUIPAMENTOPONTOs">
+    <Type Name="EQUIPAMENTOPONTO">
+      <Column Name="EPCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPCodigoTipoPonto" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPCodigoTipoEquipamento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPNumeroPortaRele" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EPObrigatorio" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_EquipamentoPonto" Member="vw_EquipamentoPontos">
+    <Type Name="vw_EquipamentoPonto">
+      <Column Name="EPCodigoPontoControle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPCodigoTipoPonto" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPCodigoTipoEquipamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EPNumeroPortaRele" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EPObrigatorio" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="TEDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EQUIPUSUARIO" Member="EQUIPUSUARIOs">
+    <Type Name="EQUIPUSUARIO">
+      <Column Name="EUSCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSCodigoEquipamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSDataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EUSDataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PONTOCONTROLE" Member="PONTOCONTROLEs">
+    <Type Name="PONTOCONTROLE">
+      <Column Name="PoCodigo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoTipo" Type="System.Char" DbType="Char(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoDescricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoBiometria" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoCartaoRFID" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoSenha" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoSmartCard" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoObservacao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoControlaSaida" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoDisparaAlarme" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoTentativaIndevidaDisparaAlarme" Type="System.Byte" DbType="TinyInt" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoPermiteLiberacaoForcada" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PoQtdMediaPessoas" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PoQtdVerificaEquip" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_EquipamentoUsuario" Member="vw_EquipamentoUsuarios">
+    <Type Name="vw_EquipamentoUsuario">
+      <Column Name="EUSCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSCodigoEquipamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EqNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="EUSDataInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EUSDataFim" Type="System.DateTime" DbType="DateTime" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EqTAGRFID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROTA" Member="ROTAs">
+    <Type Name="ROTA">
+      <Column Name="ROCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RONome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RODescricao" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ROBloqueada" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ROMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROTAUSUARIO" Member="ROTAUSUARIOs">
+    <Type Name="ROTAUSUARIO">
+      <Column Name="RUCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUCodigoRota" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUDataInicioPermissao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUDataExpiracao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUBloqueada" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RUMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_RotaUsuario" Member="vw_RotaUsuarios">
+    <Type Name="vw_RotaUsuario">
+      <Column Name="RUCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUCodigoUsuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUCodigoRota" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RONome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUDataInicioPermissao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUDataExpiracao" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="RUBloqueada" Type="System.Boolean" DbType="Bit" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RUMotivoBloqueio" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

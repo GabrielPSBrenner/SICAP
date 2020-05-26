@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL_PC/CPonto.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="PONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PoBiometria" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCartaoRFID" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="PoControlaSaida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoDisparaAlarme" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoObservacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoPermiteLiberacaoForcada" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoQtdMediaPessoas" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PoQtdVerificaEquip" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PoSenha" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoSmartCard" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoTentativaIndevidaDisparaAlarme" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="PoTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PONTOCONTROLE" nillable="true" type="tns:PONTOCONTROLE" />
+  <xs:complexType name="USUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="USAdministrador" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USAuditor" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USBloqueado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USCODIGO" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOESTAGIARIO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOTERCEIRO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOVISITANTE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USGerente" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USMATFUNC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USSeguranca" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USSenhaOpcional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USTIPO" type="ser:char" />
+      <xs:element minOccurs="0" name="USUSUARIOREDE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USUARIO" nillable="true" type="tns:USUARIO" />
+  <xs:complexType name="FUNCIONARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FUCodigoLocalidade" type="xs:int" />
+      <xs:element minOccurs="0" name="FUCodigoLotacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUMATFUNC" type="xs:int" />
+      <xs:element minOccurs="0" name="FUNOMFUNC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FUNCIONARIO" nillable="true" type="tns:FUNCIONARIO" />
+  <xs:complexType name="ESTAGIARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ESCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="ESCodigoLocalidade" type="xs:int" />
+      <xs:element minOccurs="0" name="ESCodigoLotacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ESTAGIARIO" nillable="true" type="tns:ESTAGIARIO" />
+  <xs:complexType name="TERCEIRO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TeCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="TeNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TERCEIRO" nillable="true" type="tns:TERCEIRO" />
+  <xs:complexType name="VISITANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ViCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="ViNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VISITANTE" nillable="true" type="tns:VISITANTE" />
+  <xs:complexType name="ArrayOfROTAUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ROTAUSUARIO" nillable="true" type="tns:ROTAUSUARIO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfROTAUSUARIO" nillable="true" type="tns:ArrayOfROTAUSUARIO" />
+  <xs:complexType name="ROTAUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RUCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="RUDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RUDataInicioPermissao" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROTAUSUARIO" nillable="true" type="tns:ROTAUSUARIO" />
+  <xs:complexType name="ArrayOfPONTOROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PONTOROTA" nillable="true" type="tns:PONTOROTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPONTOROTA" nillable="true" type="tns:ArrayOfPONTOROTA" />
+  <xs:complexType name="PONTOROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="PRCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="PROrdem" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTempoMaxPerm" type="xs:int" />
+      <xs:element minOccurs="0" name="PRTipoPontoControle" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PONTOROTA" nillable="true" type="tns:PONTOROTA" />
+  <xs:complexType name="ACESSOPONTOCONTROLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APAcessoForcado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoCartao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioAcesso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioInterrompeAlarme" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioLiberaForcado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APControlarSaida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APDataAcesso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APDataInterrupcaoAlarme" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APDisparouAlarme" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APMotivoAcessoForcado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APNegado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APObservacaoInterrupcao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APTipoPontoControle" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ACESSOPONTOCONTROLE" nillable="true" type="tns:ACESSOPONTOCONTROLE" />
+  <xs:complexType name="ArrayOfHASHDIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HASHDIGITAL" nillable="true" type="tns:HASHDIGITAL" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHASHDIGITAL" nillable="true" type="tns:ArrayOfHASHDIGITAL" />
+  <xs:complexType name="HASHDIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HaCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoDigital" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="HaCredencialBiometricaTextual" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HASHDIGITAL" nillable="true" type="tns:HASHDIGITAL" />
+  <xs:complexType name="DIGITAL">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="DiDataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiDedo" type="ser:char" />
+      <xs:element minOccurs="0" name="DiMao" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DIGITAL" nillable="true" type="tns:DIGITAL" />
+  <xs:complexType name="CARTAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrBloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CrCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="CrCodigoFabricante" type="xs:int" />
+      <xs:element minOccurs="0" name="CrDataBloqueio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CrMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrNumeroCartao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARTAO" nillable="true" type="tns:CARTAO" />
+  <xs:complexType name="CARTAOUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CSCODIGO" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoCartao" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CSDataDevolucao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDevolvido" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CSObservacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARTAOUSUARIO" nillable="true" type="tns:CARTAOUSUARIO" />
+  <xs:complexType name="CONTRATOTERCEIRO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CTCNPJFornecedor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CTCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="CTCodigoLocal" type="xs:int" />
+      <xs:element minOccurs="0" name="CTCodigoLotacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CTCodigoTerceiro" type="xs:int" />
+      <xs:element minOccurs="0" name="CTDataExpiracaoContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CTDataInicioContrato" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CTObservacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CONTRATOTERCEIRO" nillable="true" type="tns:CONTRATOTERCEIRO" />
+  <xs:complexType name="ArrayOfvw_EquipamentoPonto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_EquipamentoPonto" nillable="true" type="tns:vw_EquipamentoPonto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_EquipamentoPonto" nillable="true" type="tns:ArrayOfvw_EquipamentoPonto" />
+  <xs:complexType name="vw_EquipamentoPonto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EPCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="EPCodigoTipoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EPCodigoTipoPonto" type="ser:char" />
+      <xs:element minOccurs="0" name="EPNumeroPortaRele" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="EPObrigatorio" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEDescricao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_EquipamentoPonto" nillable="true" type="tns:vw_EquipamentoPonto" />
+  <xs:complexType name="vw_EquipamentoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EUSCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSDataFim" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EUSDataInicio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EqNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTAGRFID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_EquipamentoUsuario" nillable="true" type="tns:vw_EquipamentoUsuario" />
+</xs:schema>

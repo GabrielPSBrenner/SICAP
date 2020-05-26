@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CEquipamento.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfEQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EQUIPAMENTO" nillable="true" type="tns:EQUIPAMENTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEQUIPAMENTO" nillable="true" type="tns:ArrayOfEQUIPAMENTO" />
+  <xs:complexType name="EQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EqBloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EqCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="EqNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTAGRFID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTempoSinal" type="xs:int" />
+      <xs:element minOccurs="0" name="EqTipoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EqTipoLibera" type="ser:char" />
+      <xs:element minOccurs="0" name="FaCodigoFabricante" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EQUIPAMENTO" nillable="true" type="tns:EQUIPAMENTO" />
+  <xs:complexType name="ArrayOfTIPOEQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TIPOEQUIPAMENTO" nillable="true" type="tns:TIPOEQUIPAMENTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTIPOEQUIPAMENTO" nillable="true" type="tns:ArrayOfTIPOEQUIPAMENTO" />
+  <xs:complexType name="TIPOEQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TECodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="TEDescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TEEPI" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TIPOEQUIPAMENTO" nillable="true" type="tns:TIPOEQUIPAMENTO" />
+  <xs:complexType name="ArrayOfFABRICANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FABRICANTE" nillable="true" type="tns:FABRICANTE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFABRICANTE" nillable="true" type="tns:ArrayOfFABRICANTE" />
+  <xs:complexType name="FABRICANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="FaNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FABRICANTE" nillable="true" type="tns:FABRICANTE" />
+</xs:schema>

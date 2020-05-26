@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f04e940-3bfa-4b8d-b94a-4fc6f8134a8a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:56105/Fotos/Foto.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Foto.xsd" MetadataType="Schema" ID="0e423c6d-c0c1-41d7-accf-dd2cf603e782" SourceId="1" SourceUrl="http://localhost:56105/Fotos/Foto.svc?xsd=xsd0" />
+    <MetadataFile FileName="Foto1.xsd" MetadataType="Schema" ID="07bc5c7f-83ae-45c1-8fad-fbd8b56270be" SourceId="1" SourceUrl="http://localhost:56105/Fotos/Foto.svc?xsd=xsd1" />
+    <MetadataFile FileName="Foto.disco" MetadataType="Disco" ID="8c5dbbd2-7d61-44e7-8b91-85e21fc6a5ef" SourceId="1" SourceUrl="http://localhost:56105/Fotos/Foto.svc?disco" />
+    <MetadataFile FileName="Foto.wsdl" MetadataType="Wsdl" ID="a04088c1-df51-45df-9b46-f65aeaf87dd8" SourceId="1" SourceUrl="http://localhost:56105/Fotos/Foto.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ACESSO.MODEL.ACESSOPONTOCONTROLE" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>kEcgCAgFDOgQiAAFVAMQJJgBiiQAEZEAMChCIIHIggQ=</HashCode>
+      <FileName>ACESSOPONTOCONTROLE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.CARTAO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwgAGABAgwAAAQEwAsCBAAJqCgAQgihAADAgYAYAMA=</HashCode>
+      <FileName>CARTAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.CARTAOUSUARIO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAgAIIHiAgBAgAUQgEgBQIByWAA0AAABABAgAARBQA=</HashCode>
+      <FileName>CARTAOUSUARIO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.CONTRATOTERCEIRO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAUgxIABQEhAABEGQAEARgABiKAQQgRIAABgAgEKAFA=</HashCode>
+      <FileName>CONTRATOTERCEIRO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.DataContext" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9Bf+NFYFEiQe6YDkMIkSwxo0EiYAAwiaTnwkNAIl0hE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.DIGITAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABgAAATACgIKAAEQgEQDAABiCAQAhAgIABCAAAAQAA=</HashCode>
+      <FileName>DIGITAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.EQUIPAMENTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GKAkAaCBAAwAAAgEQAEAFAgFiGAGCAAAgIBAQCAAEAQ=</HashCode>
+      <FileName>EQUIPAMENTO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.EQUIPAMENTOPONTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAIABAEwRAAAFQAkABAQBiKACAAAAAABAAAAMgIA=</HashCode>
+      <FileName>EQUIPAMENTOPONTO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.FABRICANTE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQoAAABAAgAAAAGSBEABAABiCAAAAAAAABAAABAAAA=</HashCode>
+      <FileName>FABRICANTE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.FORNECEDOR" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAiAAADAAgAAQAEQAEABAAJijAAAACAAABSAAAAAgA=</HashCode>
+      <FileName>FORNECEDOR.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.LOCALIDADE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIgBAABAAgAAAAEQAEEBAABqCEgAAAAAIBAAAAAAQA=</HashCode>
+      <FileName>LOCALIDADE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.LOTACAO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIgBAABCAgQFAQGUAEkhgBBqCEgAAAAAMBAAAAAAUA=</HashCode>
+      <FileName>LOTACAO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.LOTACAOROTA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAhEAgABAAEUgEiDIABqCgAJBAggABEgACQgAA=</HashCode>
+      <FileName>LOTACAOROTA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.PARAMETRO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAABAAgAAFAEUAEIBAIRiCACAAAAAkJAAQABAAA=</HashCode>
+      <FileName>PARAMETRO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.PONTOCONTROLE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MQA4YAABYggAEAwUYwEERAAliCE2IgICETBgBAGWAUA=</HashCode>
+      <FileName>PONTOCONTROLE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.PONTOROTA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAADFAiAAAAEQAEgRAQHmCgABKAAQABABQCAACA=</HashCode>
+      <FileName>PONTOROTA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.ROTA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACBAAgAAIAESBEABQQBjCAQgAAIIEDBEAAAABA=</HashCode>
+      <FileName>ROTA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.ROTAUSUARIO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgACABASgCBAAEQAECRAABiCFAIAAkAAFAARGAAAQ=</HashCode>
+      <FileName>ROTAUSUARIO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.TIPOEQUIPAMENTO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EiAgAAABAAgAAAAEQAEBBAABiCAAAAQAAARAAAAAAAA=</HashCode>
+      <FileName>TIPOEQUIPAMENTO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_PontoRota" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgIAADFACAAAAAQAEgQAQDmCkgBKAAQCAABQCAACA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_RotaUsuario" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgACCAAAACAIAAQAACQAAACAAAAAAIAAGAABAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_Digital" Collapsed="true">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAQACAIAAACAgAEAAAAAAAAAhAAIAACAAAAEKA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.USUARIO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>HAAglASBkQiImgkWRAGYREAJyGAOmRAAQALFBQEEYgE=</HashCode>
+      <FileName>USUARIO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_CartaoUsuario" Collapsed="true">
+    <Position X="11.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAIIFCAAAAgAAAgAgAAAIQEAAwAAABACAgAAQAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.HASHDIGITAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACgAEADAAiAAAAEQBFABAAViSAoQoAAAAlAAABBAKA=</HashCode>
+      <FileName>HASHDIGITAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.ESTAGIARIO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAgAQABAgwAAJAWQAEABEABiGAAICAQAABEAAAAQAA=</HashCode>
+      <FileName>ESTAGIARIO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.FUNCIONARIO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACgAAAjAAgAQAIFwAEoBCABjCAQCAAABQBAAAAAAAA=</HashCode>
+      <FileName>FUNCIONARIO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.TERCEIRO" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AGAgAAABAAgAAAAEQAEABAABiCAAAACCAABAgAAEAQA=</HashCode>
+      <FileName>TERCEIRO.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.VISITA" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAIABgEgAgAIMYAMABAQBiCILAgACAABAIAAACRA=</HashCode>
+      <FileName>VISITA.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.VISITANTE" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAQBAAgAAAAEQAkQBAABiCAAAgCACABAAAAAQAA=</HashCode>
+      <FileName>VISITANTE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_Acesso" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kEckDAyFjuiY2AAR1AuQINgJiiUsEZGCOChHoYHMwgQ=</HashCode>
+      <FileName>vw_Acesso.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_Usuario" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAghAAAAAAAyAADAACAQEAIAAAMGBCCCALBAQEEQgE=</HashCode>
+      <FileName>vw_Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.vw_TotalAcessoPontoDia" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAQAAABBAQAAgAAAAAABAAiCgQAAgAASAAAAAAAgA=</HashCode>
+      <FileName>vw_TotalAcessoPontoDia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.MyGlobal" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>MyGlobal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.PERFIL" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PERFIL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ACESSO.MODEL.Properties.Settings" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

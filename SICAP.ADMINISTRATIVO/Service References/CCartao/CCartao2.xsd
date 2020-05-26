@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CCartao.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfCARTAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CARTAO" nillable="true" type="tns:CARTAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCARTAO" nillable="true" type="tns:ArrayOfCARTAO" />
+  <xs:complexType name="CARTAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrBloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CrCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="CrCodigoFabricante" type="xs:int" />
+      <xs:element minOccurs="0" name="CrDataBloqueio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CrMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrNumeroCartao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARTAO" nillable="true" type="tns:CARTAO" />
+  <xs:complexType name="ArrayOfFABRICANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FABRICANTE" nillable="true" type="tns:FABRICANTE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFABRICANTE" nillable="true" type="tns:ArrayOfFABRICANTE" />
+  <xs:complexType name="FABRICANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FaCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="FaNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FABRICANTE" nillable="true" type="tns:FABRICANTE" />
+</xs:schema>

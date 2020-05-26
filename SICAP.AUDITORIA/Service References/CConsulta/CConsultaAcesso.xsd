@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL_AUDITORIA/CConsultaAcesso.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfvw_Acesso">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_Acesso" nillable="true" type="tns:vw_Acesso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_Acesso" nillable="true" type="tns:ArrayOfvw_Acesso" />
+  <xs:complexType name="vw_Acesso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="APAcessoForcado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoCartao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioAcesso" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioInterrompeAlarme" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoUsuarioLiberaForcado" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APControlarSaida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APDataAcesso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APDataInterrupcaoAlarme" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="APDisparouAlarme" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APMotivoAcessoForcado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APNegado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="APObservacaoInterrupcao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="APTipoPontoControle" type="ser:char" />
+      <xs:element minOccurs="0" name="ESNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUNOMFUNC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TeNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USCODIGOESTAGIARIO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOTERCEIRO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOVISITANTE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USMATFUNC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USTIPO" nillable="true" type="ser:char" />
+      <xs:element minOccurs="0" name="ViNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_Acesso" nillable="true" type="tns:vw_Acesso" />
+</xs:schema>

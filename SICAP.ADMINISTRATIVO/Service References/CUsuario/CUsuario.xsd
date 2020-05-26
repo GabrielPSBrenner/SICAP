@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:56105/CONTROL/CUsuario.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Linq" />
+  <xs:complexType name="ROTAUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RUBloqueada" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RUCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="RUDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RUDataInicioPermissao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RUMotivoBloqueio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROTAUSUARIO" nillable="true" type="tns:ROTAUSUARIO" />
+  <xs:complexType name="USUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="USAdministrador" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USAuditor" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USBloqueado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USCODIGO" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOESTAGIARIO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOTERCEIRO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USCODIGOVISITANTE" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USGerente" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USMATFUNC" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="USMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USSeguranca" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="USSenhaOpcional" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="USTIPO" type="ser:char" />
+      <xs:element minOccurs="0" name="USUSUARIOREDE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="USUARIO" nillable="true" type="tns:USUARIO" />
+  <xs:complexType name="EQUIPUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EUSCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSDataFim" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EUSDataInicio" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EQUIPUSUARIO" nillable="true" type="tns:EQUIPUSUARIO" />
+  <xs:complexType name="ArrayOfvw_EquipamentoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_EquipamentoUsuario" nillable="true" type="tns:vw_EquipamentoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_EquipamentoUsuario" nillable="true" type="tns:ArrayOfvw_EquipamentoUsuario" />
+  <xs:complexType name="vw_EquipamentoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EUSCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="EUSDataFim" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EUSDataInicio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EqNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTAGRFID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_EquipamentoUsuario" nillable="true" type="tns:vw_EquipamentoUsuario" />
+  <xs:complexType name="ArrayOfEQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EQUIPAMENTO" nillable="true" type="tns:EQUIPAMENTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEQUIPAMENTO" nillable="true" type="tns:ArrayOfEQUIPAMENTO" />
+  <xs:complexType name="EQUIPAMENTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EqBloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EqCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="EqNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTAGRFID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EqTempoSinal" type="xs:int" />
+      <xs:element minOccurs="0" name="EqTipoEquipamento" type="xs:int" />
+      <xs:element minOccurs="0" name="EqTipoLibera" type="ser:char" />
+      <xs:element minOccurs="0" name="FaCodigoFabricante" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EQUIPAMENTO" nillable="true" type="tns:EQUIPAMENTO" />
+  <xs:complexType name="ArrayOfCARTAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CARTAO" nillable="true" type="tns:CARTAO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCARTAO" nillable="true" type="tns:ArrayOfCARTAO" />
+  <xs:complexType name="CARTAO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CrBloqueado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CrCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="CrCodigoFabricante" type="xs:int" />
+      <xs:element minOccurs="0" name="CrDataBloqueio" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CrMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrNumeroCartao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARTAO" nillable="true" type="tns:CARTAO" />
+  <xs:complexType name="ArrayOfUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="USUARIO" nillable="true" type="tns:USUARIO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUSUARIO" nillable="true" type="tns:ArrayOfUSUARIO" />
+  <xs:complexType name="ArrayOfROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ROTA" nillable="true" type="tns:ROTA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfROTA" nillable="true" type="tns:ArrayOfROTA" />
+  <xs:complexType name="ROTA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ROBloqueada" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ROCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="RODescricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ROMotivoBloqueio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RONome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ROTA" nillable="true" type="tns:ROTA" />
+  <xs:complexType name="ArrayOfFUNCIONARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FUNCIONARIO" nillable="true" type="tns:FUNCIONARIO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFUNCIONARIO" nillable="true" type="tns:ArrayOfFUNCIONARIO" />
+  <xs:complexType name="FUNCIONARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FUCodigoLocalidade" type="xs:int" />
+      <xs:element minOccurs="0" name="FUCodigoLotacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FUMATFUNC" type="xs:int" />
+      <xs:element minOccurs="0" name="FUNOMFUNC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FUNCIONARIO" nillable="true" type="tns:FUNCIONARIO" />
+  <xs:complexType name="ArrayOfTERCEIRO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TERCEIRO" nillable="true" type="tns:TERCEIRO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTERCEIRO" nillable="true" type="tns:ArrayOfTERCEIRO" />
+  <xs:complexType name="TERCEIRO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TeCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="TeNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TERCEIRO" nillable="true" type="tns:TERCEIRO" />
+  <xs:complexType name="ArrayOfESTAGIARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ESTAGIARIO" nillable="true" type="tns:ESTAGIARIO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfESTAGIARIO" nillable="true" type="tns:ArrayOfESTAGIARIO" />
+  <xs:complexType name="ESTAGIARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ESCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="ESCodigoLocalidade" type="xs:int" />
+      <xs:element minOccurs="0" name="ESCodigoLotacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ESNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ESTAGIARIO" nillable="true" type="tns:ESTAGIARIO" />
+  <xs:complexType name="ArrayOfVISITANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VISITANTE" nillable="true" type="tns:VISITANTE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVISITANTE" nillable="true" type="tns:ArrayOfVISITANTE" />
+  <xs:complexType name="VISITANTE">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ViCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="ViNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VISITANTE" nillable="true" type="tns:VISITANTE" />
+  <xs:complexType name="ArrayOfvw_RotaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_RotaUsuario" nillable="true" type="tns:vw_RotaUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_RotaUsuario" nillable="true" type="tns:ArrayOfvw_RotaUsuario" />
+  <xs:complexType name="vw_RotaUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RONome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RUBloqueada" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RUCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoRota" type="xs:int" />
+      <xs:element minOccurs="0" name="RUCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="RUDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RUDataInicioPermissao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RUMotivoBloqueio" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_RotaUsuario" nillable="true" type="tns:vw_RotaUsuario" />
+  <xs:complexType name="ArrayOfvw_CartaoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_CartaoUsuario" nillable="true" type="tns:vw_CartaoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_CartaoUsuario" nillable="true" type="tns:ArrayOfvw_CartaoUsuario" />
+  <xs:complexType name="vw_CartaoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CSCODIGO" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoCartao" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CSDataDevolucao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDevolvido" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CSObservacao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrNumeroCartao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CrTipo" type="ser:char" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_CartaoUsuario" nillable="true" type="tns:vw_CartaoUsuario" />
+  <xs:complexType name="ArrayOfvw_Digital">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_Digital" nillable="true" type="tns:vw_Digital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_Digital" nillable="true" type="tns:ArrayOfvw_Digital" />
+  <xs:complexType name="vw_Digital">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiCodigo" type="xs:int" />
+      <xs:element minOccurs="0" name="DiDataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DiDedo" type="ser:char" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Linq" minOccurs="0" name="DiImgDigital" nillable="true" type="q1:Binary" />
+      <xs:element minOccurs="0" name="DiMao" type="ser:char" />
+      <xs:element minOccurs="0" name="EqNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HaCodigoUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_Digital" nillable="true" type="tns:vw_Digital" />
+  <xs:complexType name="CARTAOUSUARIO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CSCODIGO" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoCartao" type="xs:int" />
+      <xs:element minOccurs="0" name="CSCodigoUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="CSDataDevolucao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDataExpiracao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CSDevolvido" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CSObservacao" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CARTAOUSUARIO" nillable="true" type="tns:CARTAOUSUARIO" />
+</xs:schema>

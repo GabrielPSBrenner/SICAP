@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EBC791D-695D-41CB-99B8-AD0A4F92F15F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ACESSO.PONTOCONTROLE</RootNamespace>
+    <AssemblyName>ACESSO.PONTOCONTROLE</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FTD2XX_NET">
+      <HintPath>..\..\..\Dissertação_Mestrado\Rele USB\4R\windows\c#(interface grafica)\4R\USB2E2S\bin\Debug\FTD2XX_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="INB.CARREGACLASSE">
+      <HintPath>..\..\..\..\..\..\..\Projetos\INB.CARREGACLASSE\bin\Debug\INB.CARREGACLASSE.dll</HintPath>
+    </Reference>
+    <Reference Include="NITGEN.SDK.NBioBSP, Version=1.1.2.2, Culture=neutral, PublicKeyToken=96eee45103d523d1, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TouchscreenKeyboard">
+      <HintPath>..\..\..\Dissertação_Mestrado\Teclado de Monitor Touch\touchscreenkeyboard_src\TouchscreenKeyboard\TouchscreenKeyboard\bin\Debug\TouchscreenKeyboard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\libUSB4S.cs" />
+    <Compile Include="Classes\Registro.cs" />
+    <Compile Include="FrmAutenticaRede.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAutenticaRede.Designer.cs">
+      <DependentUpon>FrmAutenticaRede.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConfigura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConfigura.Designer.cs">
+      <DependentUpon>FrmConfigura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLiberaForcado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLiberaForcado.Designer.cs">
+      <DependentUpon>FrmLiberaForcado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\CAutentica\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CConfigura\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CFoto\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CPonto\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAutenticaRede.resx">
+      <DependentUpon>FrmAutenticaRede.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConfigura.resx">
+      <DependentUpon>FrmConfigura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLiberaForcado.resx">
+      <DependentUpon>FrmLiberaForcado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\CAutentica\CAutentica.wsdl" />
+    <None Include="Service References\CAutentica\CAutentica.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CAutentica\CAutentica1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CConfigura\ACESSO.PONTOCONTROLE.CConfigura.PONTOCONTROLE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CConfigura\CConfigura.wsdl" />
+    <None Include="Service References\CConfigura\CConfigura.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CConfigura\CConfigura1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CConfigura\CConfigura2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFoto\Foto.wsdl" />
+    <None Include="Service References\CFoto\Foto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CFoto\Foto1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.CARTAO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.CARTAOUSUARIO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.CONTRATOTERCEIRO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.DIGITAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.ESTAGIARIO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.FUNCIONARIO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.HASHDIGITAL.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.PONTOCONTROLE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.PONTOROTA.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.ROTAUSUARIO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.TERCEIRO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.USUARIO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.VISITANTE.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.vw_EquipamentoPonto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\ACESSO.PONTOCONTROLE.CPonto.vw_EquipamentoUsuario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\CPonto\CPonto.wsdl" />
+    <None Include="Service References\CPonto\CPonto.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CPonto\CPonto1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CPonto\CPonto2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CAutentica\" />
+    <WCFMetadataStorage Include="Service References\CConfigura\" />
+    <WCFMetadataStorage Include="Service References\CFoto\" />
+    <WCFMetadataStorage Include="Service References\CPonto\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CConfigura\CConfigura.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CConfigura\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CConfigura\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CConfigura\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CFoto\Foto.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CFoto\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CFoto\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CFoto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CPonto\CPonto.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CPonto\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CPonto\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CPonto\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SICAP.BIOMETRIA\SICAP.BIOMETRIA.csproj">
+      <Project>{7079C7A4-38DE-476F-BF56-6C337CBCA27D}</Project>
+      <Name>SICAP.BIOMETRIA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutentica\CAutentica.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutentica\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutentica\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CAutentica\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

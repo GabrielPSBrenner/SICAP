@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ACESSO.MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56105/CONTROL_AUDITORIA/CTotalAcessoPontoDia.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfvw_TotalAcessoPontoDia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="vw_TotalAcessoPontoDia" nillable="true" type="tns:vw_TotalAcessoPontoDia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfvw_TotalAcessoPontoDia" nillable="true" type="tns:ArrayOfvw_TotalAcessoPontoDia" />
+  <xs:complexType name="vw_TotalAcessoPontoDia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ANO" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="APCodigoPontoControle" type="xs:int" />
+      <xs:element minOccurs="0" name="APNegado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DIA" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MÊS" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PoNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PoTipo" type="ser:char" />
+      <xs:element minOccurs="0" name="TotalAcesso" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="vw_TotalAcessoPontoDia" nillable="true" type="tns:vw_TotalAcessoPontoDia" />
+</xs:schema>
